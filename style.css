@@ -35,9 +35,19 @@ h2 {
   border: 1px solid #ddd;
   width: calc(100% / 6);
   text-align: center;
-  padding: 20px;
   border-right-style: none;
 }
+
+.tab-group > li > a {
+  display: block;
+  padding: 20px;
+}
+
+.tab-group > li.active > a {
+  background: #666;
+  color: #fff;
+}
+
 
 .tab-group > li:last-child {
   border-right-style: solid;
@@ -46,15 +56,21 @@ h2 {
 .product-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .product-list > li {
   width: 32%;
   border: 1px solid #ccc;
+  margin-right: 2%;
   margin-bottom: 20px;
   text-align: center;
 }
+
+.product-list > li:nth-child(3n) {
+  margin-right: 0;
+}
+
 .product-list img {
   width: 100%;
 }
